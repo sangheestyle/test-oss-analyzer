@@ -18,7 +18,7 @@ jobs:
         uses: oss-review-toolkit/ort-ci-github-action@v1
         with:
           image: ghcr.io/sangheestyle/ort:latest
-          run: cache-dependencies, labels, analyzer, evaluator, advisor, reporter, upload-results
+          run: cache-dependencies, analyzer, reporter, upload-results
       - name: Read ORT result
         run: |
           ls $HOME/.ort/ort-results
