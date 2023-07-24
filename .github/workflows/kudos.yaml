@@ -18,8 +18,10 @@ jobs:
         uses: oss-review-toolkit/ort-ci-github-action@v1
         with:
           image: ghcr.io/sangheestyle/ort:latest
-          run: cache-dependencies, analyzer, reporter, upload-results
-      - name: Read ORT result
+          run: cache-dependencies, analyzer, upload-results
+      - name: Generate Kudos
         run: |
-          ls $HOME/.ort/ort-results
-          cat $HOME/.ort/ort-results/analyzer-result.json
+          curl -LO https://github.com/sangheestyle/semicolons-tools/releases/download/v0.0.1/semicolons-tools-v0.0.1-linux-amd64.tar.gz
+          tar -zxvf semicolons-tools-v0.0.1-linux-amd64.tar.gz
+          ls -al
+          ./semicolons-tools projectName $HOME/.ort/ort-results/analyzer-result.json
