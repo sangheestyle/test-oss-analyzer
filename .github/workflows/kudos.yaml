@@ -22,5 +22,5 @@ jobs:
       - name: Generate Kudos
         run: |
           curl -LO https://github.com/LoremLabs/kudos-for-code/releases/download/v0.0.1/kudos-for-code-v0.0.1-linux-amd64.tar.gz
-          tar -zxvf semicolons-tools-v0.0.1-linux-amd64.tar.gz
-          ./semicolons-tools projectName $HOME/.ort/ort-results/analyzer-result.json
+          tar -zxvf kudos-for-code-v0.0.1-linux-amd64.tar.gz
+          ./kudos-for-code projectName $HOME/.ort/ort-results/analyzer-result.json
