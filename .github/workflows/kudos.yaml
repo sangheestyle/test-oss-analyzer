@@ -21,6 +21,6 @@ jobs:
           run: cache-dependencies, analyzer, upload-results
       - name: Generate Kudos
         run: |
-          curl -LO https://github.com/sangheestyle/semicolons-tools/releases/download/v0.0.1/semicolons-tools-v0.0.1-linux-amd64.tar.gz
+          curl -LO https://github.com/LoremLabs/kudos-for-code/releases/download/v0.0.1/kudos-for-code-v0.0.1-linux-amd64.tar.gz
           tar -zxvf semicolons-tools-v0.0.1-linux-amd64.tar.gz
           ./semicolons-tools projectName $HOME/.ort/ort-results/analyzer-result.json
