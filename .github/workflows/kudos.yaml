@@ -21,6 +21,6 @@ jobs:
           run: cache-dependencies, analyzer, upload-results
       - name: Generate Kudos
         run: |
-          curl -LO https://github.com/LoremLabs/kudos-for-code/releases/download/v0.0.2/kudos-for-code-v0.0.2-linux-amd64.tar.gz
-          tar -zxvf kudos-for-code-v0.0.2-linux-amd64.tar.gz
+          curl -LO https://github.com/LoremLabs/kudos-for-code/releases/download/v0.0.3/kudos-for-code-v0.0.3-linux-amd64.tar.gz
+          tar -zxvf kudos-for-code-v0.0.3-linux-amd64.tar.gz
           ./kudos-for-code projectName $HOME/.ort/ort-results/analyzer-result.json
